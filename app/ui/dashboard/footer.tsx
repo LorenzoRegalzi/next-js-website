@@ -1,6 +1,8 @@
+import ArrowRightIcon from "../icon/arrow-right";
+
 const Footer = () => {
     return (
-      <footer className="bg-gray-800 text-gray-300 py-12">
+      <footer className="bg-customBlue text-gray-300 py-12">
         <div className="container mx-auto py-7">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="col-span-1">
@@ -12,46 +14,34 @@ const Footer = () => {
             <div className="col-span-1">
               <h2 className="text-lg font-semibold mb-4">Società</h2>
               <ul className="space-y-2">
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Azienda</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Azienda</a>
                 </li>
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Qualità</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Qualità</a>
                 </li>
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Contatti</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Contatti</a>
                 </li>
               </ul>
             </div>
             <div className="col-span-1">
               <h2 className="text-lg font-semibold mb-4">Attività</h2>
               <ul className="space-y-2">
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Co-engineering</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Co-engineering</a>
                 </li>
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Analisi e studio dei materiali</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Analisi e studio dei materiali</a>
                 </li>
-                <li className="flex">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                    <path fillRule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clipRule="evenodd" />
-                  </svg>
-                  <a href="#" className="hover:text-gray-200">Stampi</a>
+                <li className="flex items-center">
+                  <ArrowRightIcon size='15px'></ArrowRightIcon>
+                  <a href="#" className="hover:text-gray-200" style={{marginLeft: '3px'}}>Stampi</a>
                 </li>
               </ul>
             </div>

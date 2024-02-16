@@ -7,6 +7,18 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      customBlueRgb: 'rgba(0,79,146,0.85)',
+      customLightGrey: '#f8f8f8',
+      customBlack: '#0F192D',
+      customGrey: '#fafafa',
+      customWhite: '#ffffff',
+      customBlue: '#004F92',
+      customHoverButton: '#252525',
+      customDarkGrey: '#F4F4F4',
+      customDarkGrey2: '#F6F7F8',
+      textGrey:'#9c9ea2'
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
