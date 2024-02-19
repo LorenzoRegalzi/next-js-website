@@ -17,6 +17,8 @@ const config: Config = {
       customHoverButton: '#252525',
       customDarkGrey: '#F4F4F4',
       customDarkGrey2: '#F6F7F8',
+      customDarkGrey3:'#f1f1f5',
+      customDarkGrey4:'#fbfbfb',
       textGrey:'#9c9ea2'
     },
     extend: {

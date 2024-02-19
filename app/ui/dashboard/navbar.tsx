@@ -99,12 +99,13 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
 
               <div className="relative" onMouseEnter={toggleMenuContact} onMouseLeave={toggleMenuContact}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
-                Contatti
+                
+                  <a href="/contact">Contatti</a>
                   <ArrowDownIcon />
                 </button>
                 {isOpenContact && (
                   <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="#" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Job Opportunity</a>
+                    <a href="/job-opportunity" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Job Opportunity</a>
                   </div>
                 )}
               </div>
