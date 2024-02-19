@@ -18,7 +18,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-100 bg-customWhite flex-col flex items-center">
-        <h2 className="text-4xl text-customBlack font-extrabold text-center">L"azienda</h2>
+        <h2 className="text-4xl text-customBlack font-extrabold text-center">L azienda</h2>
         <p className="text-customBlack justify-center text-center">Nata dalla fusione tra due storiche società, Delta Components e ATS, DeltAts è una realtà importante nello stampaggio materie
         plastiche in provincia di Torino. La produzione è destinata principalmente a prodotti ad elevata tecnologia per il settore automotive.</p>
         <div style={{width: "20px", background: "blue", height: "3px", marginBottom:"20px"}}></div>
