@@ -31,7 +31,7 @@ export default function Page() {
             </div>
             <div className="md:flex bg-customWhite ">
                 <div className=" w-[100%] md:w-[33.33%] p-20 bg-customDarkGrey2 ">
-                    <h1 className="text-customBlack text-5xl text-left font-extrabold">L'azienda oggi</h1>
+                    <h1 className="text-customBlack text-5xl text-left font-extrabold">L azienda oggi</h1>
                     <p className="text-customBlack text-left" style={{marginTop:'20px'}}>DeltAts oggi è una realtà importante nello stampaggio materie plastiche in provincia di Torino. Ha una produzione diversificata e specializzata, destinata in massima parte a prodotti ad elevata tecnologia per il settore automotive.
 
 L’attività viene svolta in due unità produttive attigue, per un totale di 7.000 mq. coperti su un’area di 30.000 mq.</p>
