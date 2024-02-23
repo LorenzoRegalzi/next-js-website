@@ -3,6 +3,7 @@ import CardIcon from "./ui/components/card-icon";
 import Button from "./ui/components/button";
 import Card from "./ui/components/card";
 import CardDoubleColor from "./ui/components/card-double-color";
+import Head from "next/head";
 
 
 export default function Home() {
@@ -10,6 +11,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="stylesheet" href="/path/to/your/css/icofont.min.css" />
+      </Head>
       <div className="w-100 h-[40rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/12/facciata-deltats.jpg?id=9202) !important", backgroundPosition: "center"}}>
         <div className="text-right w-[70rem]">
           <h1 className="text-5xl font-extrabold">Dal progetto <br/>al prodotto</h1>

@@ -1,6 +1,54 @@
+"use client"
+import { useRef } from "react";
 import Button from "../ui/components/button";
 
 export default function Page() {
+
+    const inputNameRef: any = useRef(null);
+    const inputSurnameRef: any = useRef(null);
+    const inputBusinessRef: any = useRef(null);
+    const inputEmailRef: any = useRef(null);
+    const inputMessageRef: any = useRef(null);
+    const checkboxref: any = useRef(null);
+    
+
+    const handleSubmit = async () => {
+        
+        console.log('checkboxref', checkboxref.current.checked)
+
+        if(checkboxref.current.checked){
+          const formData = {
+            name: inputNameRef.current.value,
+            email: inputEmailRef.current.value,
+            message: inputMessageRef.current.value,
+            surname: inputSurnameRef.current.value,
+            business: inputBusinessRef.current.value
+          };
+      
+          const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          };
+      
+          try {
+            const response = await fetch('/api/first-route', requestOptions);
+            const result = await response.json();
+            
+            if (response.ok) {
+              alert("Email inviata con successo!");
+              // Qui puoi gestire ulteriormente la risposta positiva, ad esempio resettare il form
+            } else {
+              throw new Error(result.error || "Qualcosa è andato storto nell'invio dell'email");
+            }
+          } catch (error) {
+            console.warn(error);
+          }
+        } else {
+          alert("Compilare acconsento al trattamento dei dati personali");
+        }
+      };
+
     return (
         <>
             <div className="w-100 h-[20rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/12/facciata-deltats.jpg?id=9202) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
@@ -15,23 +63,23 @@ export default function Page() {
                     <p className="text-customBlack text-center">Per ricevere ulteriori informazioni utilizzate la form qui sotto.</p>
                     <p className="text-customBlack text-center">Tutti i campi sono obbligatori.</p>
                     <div className="w-[100%] flex justify-between"  style={{marginBottom:'10px',paddingTop:'34px'}}>
-                        <input type="text" className="w-[49%]" placeholder="Nome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px'}}/>
-                        <input type="text" className="w-[49%]" placeholder="Cognome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px'}}/>
+                        <input type="text" className="w-[49%]"  ref={inputNameRef} placeholder="Nome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                        <input type="text" className="w-[49%]"  ref={inputSurnameRef} placeholder="Cognome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
                     </div>
                     <div className="w-[100%] flex justify-between" style={{marginBottom:'10px'}}>
-                        <input type="text" className="w-[49%]" placeholder="Email*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px'}}/>
-                        <input type="text" className="w-[49%]" placeholder="Azienda*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px'}}/>
+                        <input type="text" className="w-[49%]" ref={inputEmailRef} placeholder="Email*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                        <input type="text" className="w-[49%]" ref={inputBusinessRef} placeholder="Azienda*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
                     </div>
                     <div className="w-[100%]">
-                    <input type="text" placeholder="Messaggio*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px', height:'100px', width:'100%'}}/>
+                      <input type="text" placeholder="Messaggio*" ref={inputMessageRef} style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px', height:'100px', width:'100%',color:'black'}}/>
                     </div>
               
                     <div className="flex w-[100%]" style={{marginBottom:'20px', marginTop:'20px'}}>
-                        <input type="checkbox" style={{marginRight:'5px'}}/> 
+                        <input type="checkbox" ref={checkboxref} style={{marginRight:'5px'}}/> 
                         <p className="text-customBlack">acconsento al trattamento dei dati personali*</p>
                     </div>
-                    <div className="w-[30%]">
-                        <Button text="Invia Messaggio" ></Button>
+                    <div className="w-[30%]" onClick={() => handleSubmit()}>
+                        <Button text="Invia Messaggio"></Button>
                     </div>
                 </div>
                 <div className=" w-[100%] md:w-[30%] flex justify-center flex-col bg-customDarkGrey3" style={{paddingTop: '48px !important',paddingRight: '30px !important',paddingBottom: '70px !important',paddingLeft: '30px !important'}} >
