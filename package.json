@@ -15,7 +15,6 @@
     "react": "^16",
     "react-dom": "^16",
     "react-icofont": "^1.0.19",
-    "react-parallax": "^3.5.1",
     "swiper": "^11.0.6"
   },
   "devDependencies": {
