@@ -1,7 +1,9 @@
-import Link from 'next/link';
 "use client"
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ArrowDownIcon from '../icon/arrow-down';
+import Image from 'next/image';
+import Logo from "./../../../img/default/sirion.png"
 
 const Navbar = () => {
 
@@ -48,64 +50,46 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
           
           <div className="flex-shrink-0">
             {/* Your logo */}
-            <a href="/">
-              <img className="h-8 w-auto" src="https://www.deltats.eu/wp-content/uploads/2019/02/logo-w.png" alt="" data-no-retina=""></img>
-            </a>
+            <Link href={'/'}>
+            
+                <Image src={Logo}  className="h-7 w-auto" alt="LOGO" data-no-retina="" ></Image>
+          
+            </Link>
           </div>
           {/* Navbar links */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
             
-              <div className="relative" onMouseEnter={toggleMenu} onMouseLeave={toggleMenu}>
-                <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex h-100 flex items-center">
-                  <a href="/company">Azienda</a>
-                  <ArrowDownIcon />
-                </button>
-                {isOpen && (
-                  <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="code-of-ethics" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Codice Etico</a>
-                  </div>
-                )}
-              </div>
-              <a href="/products" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a>
+              <Link href="/" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
               <div className="relative" onMouseEnter={toggleMenuKH} onMouseLeave={toggleMenuKH}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
-                <a href="/know-how">  Know How</a>
+                  Prodotti
                   <ArrowDownIcon />
                 </button>
                 {isOpenKH && (
-                  <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="/co-engineering" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Co-engineering</a>
-                    <a href="/analysis-and-study-of-materials" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Analisi e studio dei materiali</a>
-                  </div>
-                )}
-              </div>
-              <a href="/molds" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Stampi</a>
-              
-              <div className="relative" onMouseEnter={toggleMenuProd} onMouseLeave={toggleMenuProd}>
-                <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
-                  <a href="/production">Produzione</a>
-                  <ArrowDownIcon />
-                </button>
-                {isOpenProd && (
                   <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100  shadow-lg">
-                    <a href="/machines" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Macchinari</a>
-                    <a href="/industry-4-0" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Industria 4.0</a>
+                    <Link href="/know-how" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Know-How</Link>
+                    <Link href="/products"  className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">I nostri prodotti</Link>
                   </div>
                 )}
               </div>
-              <a href="/quality" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Qualità</a>
+              
+              <Link href="/technology" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Tecnologia</Link>
+              
+             
+              <Link href="/sostenibility" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Sostenibilità</Link>
             
 
               <div className="relative" onMouseEnter={toggleMenuContact} onMouseLeave={toggleMenuContact}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
                 
-                  <a href="/contact">Contatti</a>
+                  Contatti
                   <ArrowDownIcon />
                 </button>
                 {isOpenContact && (
                   <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="/job-opportunity" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Job Opportunity</a>
+                    <Link href="/contact" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dove siamo</Link>
+                    <Link href="/job-opportunity" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Job Opportunity</Link>
                   </div>
                 )}
               </div>
@@ -119,3 +103,5 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
 };
 
 export default Navbar;
+
+
