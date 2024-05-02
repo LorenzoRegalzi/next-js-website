@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Button from "../ui/components/button";
 import ArrowDownIcon from "../ui/icon/arrow-down";
 import Icofont from 'react-icofont';
+import Title from "../ui/components/title";
 
 export default function Page() {
 
@@ -56,100 +57,84 @@ export default function Page() {
 
     return (
         <>
-            <div className="w-100 h-[20rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/12/facciata-deltats.jpg?id=9202) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-                <div className="text-center w-[70rem]">
-                <h1 className="text-5xl font-extrabold">Job Opportunity</h1>
-                </div>
-            </div>
+            <Title title={'Sirion Srl - Job Opportunity'} />
             
-            <div className="md:flex bg-customWhite p-12">
+            <div className="md:flex bg-customWhite pl-60 pr-60">
                 
                 <div className=" w-[100%] md:w-[50%] flex justify-center flex-col " style={{paddingTop: '48px !important',paddingRight: '30px !important',paddingBottom: '70px !important',paddingLeft: '30px !important'}} >
-                    <p className="text-customBlack font-extrabold text-2xl">Vuoi lavorare con noi?</p>
+                    <p className="text-customBlack font-extrabold text-2xl pb-5">Vuoi lavorare con noi?</p>
                     <p className="text-customBlack font-extrabold">Siamo alla ricerca di un ADDETTO OFFICINA STAMPI.</p>
-                    <p className="text-customBlack font-extrabold">Job Description</p>
+                    <p className="text-customBlack font-extrabold pt-5">Job Description</p>
                     <p className="text-customBlack underline">La risorsa si occuperà di:</p>
                     <div className="flex">
-                        <Icofont icon="bell" className='text-customBlack' />
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Assemblare e smontare le varie parti degli stampi;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Consultare la Distinta Base dello stampo da realizzare;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Consultare i disegni costruttivi su sistema CAD;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Combinare le varie parti di uno stampo nuovo eseguendo lavorazioni di aggiustaggio per garantire le tolleranze dimensionali necessarie al corretto assemblaggio e funzionamento;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Eseguire lavorazioni meccaniche di piccola entità a banco e su macchine utensili tradizionali e CNC;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Cablare elettricamente gli iniettori degli stampi;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Cablare circuiti idraulici, oleodinamici e pneumatici su stampi e attrezzature necessarie al reparto produttivo;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Individuare i problemi di funzionamento di uno stampo o attrezzatura in manutenzione;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Collaborare con i colleghi della produzione per problematiche e malfunzionamenti ;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Intervenire quando possibile con stampo in pressa per il ripristino di rotture di lieve entità;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Eseguire il collaudo a freddo degli stampi pronti per il collaudo;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Mantenimento ordine e pulizia dell’area di lavoro di competenza e delle aree comuni;</p>
                     </div>
                     <div className="flex">
-                        <ArrowDownIcon color='blue' size='15px'></ArrowDownIcon>
-                        <p className="text-customBlack">Movimentare correttamente gli stampi e le parti di cui sono costituiti;</p>
+                        <p className="text-customBlack">- Utilizzare il sistema gestionale per registrare le ore di lavoro sulle commesse specifiche.</p>
                     </div>
-                    <p className="text-customBlack font-extrabold">Requisiti fondamentali</p>
+                    <p className="text-customBlack font-extrabold pt-5">Requisiti fondamentali</p>
                     <p className="text-customBlack">Desideriamo entrare in contatto con candidati in possesso di diploma indirizzo tecnico oppure corsi di studio specifici per Tecnici CNC e con un’esperienza di almeno 3/5 anni nel ruolo. E’ richiesta la capacità di lettura disegno tecnico, utilizzo strumenti di misura, conoscenza di base di sistemi CAD/CAM, utilizzo di macchine utensili tradizionali e CNC. Costituisce titolo preferenziale la conoscenza degli stampi per materie plastiche e delle attrezzature specifiche. E’ gradita la conoscenza base dell’inglese tecnico. Completano il profilo dinamicità, flessibilità, puntualità, precisione, doti comunicative e di organizzazione del tempo, capacità di analisi e problem solving, disponibilità ad eventuali straordinari (all’occorrenza anche di sabato in funzione del carico di lavoro). Inquadramento e retribuzione saranno commisurati all’effettiva esperienza maturata.</p>
                 </div>
-                <div className=" w-[100%] md:w-[50%] flex flex-col justify-center items-center bg-customDarkGrey4" style={{border: '2px solid #f1f1f5',paddingTop: '48px !important', paddingRight: '46px !important', paddingBottom: '70px !important', paddingLeft: '46px !important'}}>
-                    <h3 className="text-customBlack font-extrabold text-center text-3xl">Richiesta informazioni</h3>
-                    <p className="text-customBlack text-center">Per ricevere ulteriori informazioni utilizzate la form qui sotto.</p>
-                    <p className="text-customBlack text-center">Tutti i campi sono obbligatori.</p>
-                    <div className="w-[100%] flex justify-between"  style={{marginBottom:'10px',paddingTop:'34px'}}>
-                        <input type="text" className="w-[49%]" ref={inputNameRef} placeholder="Nome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
-                        <input type="text" className="w-[49%]" ref={inputSurnameRef} placeholder="Cognome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
-                    </div>
-                    <div className="w-[100%] flex justify-between" style={{marginBottom:'10px'}}>
-                        <input type="text" className="w-[49%]" ref={inputEmailRef}  placeholder="Email*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
-                        <input type="text" className="w-[49%]" ref={inputBusinessRef} placeholder="Telefono*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
-                    </div>
-                    <div className="w-[100%]">
-                    <input type="file" placeholder="Messaggio*" ref={inputMessageRef} style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px', width:'100%'}}/>
-                    </div>
-              
-                    <div className="flex w-[100%]" style={{marginBottom:'20px', marginTop:'20px'}}>
-                        <input type="checkbox" ref={checkboxref} style={{marginRight:'5px'}}/> 
-                        <p className="text-customBlack">acconsento al trattamento dei dati personali*</p>
-                    </div>
-                    <div className="w-[40%]" onClick={() => handleSubmit()}>
-                        <Button text="Invia Curriculum" onClick={() => handleSubmit()}></Button>
+                <div className=" w-[100%] md:w-[50%] flex justify-center  bg-customDarkGrey4"  style={{paddingTop: '48px !important'}}>
+                    <div style={{border: '2px solid #f1f1f5',paddingTop: '48px !important', paddingRight: '46px !important', paddingBottom: '70px !important', paddingLeft: '46px !important', height:'fit-content'}}>
+                        <h3 className="text-customBlack font-extrabold text-center text-3xl">Richiesta informazioni</h3>
+                        <p className="text-customBlack text-center">Per ricevere ulteriori informazioni utilizzate la form qui sotto.</p>
+                        <p className="text-customBlack text-center">Tutti i campi sono obbligatori.</p>
+                        <div className="w-[100%] flex justify-between"  style={{marginBottom:'10px',paddingTop:'34px'}}>
+                            <input type="text" className="w-[49%]" ref={inputNameRef} placeholder="Nome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                            <input type="text" className="w-[49%]" ref={inputSurnameRef} placeholder="Cognome*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                        </div>
+                        <div className="w-[100%] flex justify-between" style={{marginBottom:'10px'}}>
+                            <input type="text" className="w-[49%]" ref={inputEmailRef}  placeholder="Email*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                            <input type="text" className="w-[49%]" ref={inputBusinessRef} placeholder="Telefono*" style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px',color:'black'}}/>
+                        </div>
+                        <div className="w-[100%]">
+                        <input type="file" placeholder="Messaggio*" ref={inputMessageRef} style={{border: '2px solid #f1f1f5', paddingTop: '6px',paddingRight: '10px',paddingBottom: '6px',paddingLeft: '10px', width:'100%'}}/>
+                        </div>
+                
+                        <div className="flex w-[100%]" style={{marginBottom:'20px', marginTop:'20px'}}>
+                            <input type="checkbox" ref={checkboxref} style={{marginRight:'5px'}}/> 
+                            <p className="text-customBlack">acconsento al trattamento dei dati personali*</p>
+                        </div>
+                        <div className="flex justify-center" onClick={() => handleSubmit()}>
+                            <Button text="Invia Curriculum" onClick={() => handleSubmit()}></Button>
+                        </div>
                     </div>
                 </div>
             </div>

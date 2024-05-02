@@ -1,6 +1,9 @@
 "use client"
 import { useRef } from "react";
 import Button from "../ui/components/button";
+import Title from "../ui/components/title";
+import Image from "next/image";
+import imageUrl from "../../img/default/map.jpg"
 
 export default function Page() {
 
@@ -51,11 +54,7 @@ export default function Page() {
 
     return (
         <>
-            <div className="w-100 h-[20rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/12/facciata-deltats.jpg?id=9202) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-                <div className="text-center w-[70rem]">
-                <h1 className="text-5xl font-extrabold">Contatti</h1>
-                </div>
-            </div>
+            <Title title={'Sirion Srl - Contatti'} />
             
             <div className="md:flex bg-customWhite p-12">
                 <div className=" w-[100%] md:w-[70%] flex flex-col justify-center items-center" style={{border: '2px solid #f1f1f5',paddingTop: '48px !important', paddingRight: '46px !important', paddingBottom: '70px !important', paddingLeft: '46px !important'}}>
@@ -101,10 +100,19 @@ export default function Page() {
                     <p className="text-customBlack">Capitale Sociale € 1.500.000 i.v.</p>
                 </div>
             </div>
-           
-            <div className="w-100 h-[25rem] flex items-center justify-center p-10" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2022/02/map.jpg?id=9375) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
-                
-            </div>
+          
+            <div className="relative w-full h-[20rem] flex items-center justify-center">
+    {/* Immagine */}
+          <Image
+              src={imageUrl}
+              alt="Banner Image"
+              layout="fill" // Imposta il layout su 'fill' per adattare l'immagine al contenitore
+              objectFit="cover" // Imposta objectFit su 'cover' per coprire completamente il contenitore
+              quality={100} // Imposta la qualità dell'immagine
+          />
+        
+       
+          </div>
         </>
       );
 }
