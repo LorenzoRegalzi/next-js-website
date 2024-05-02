@@ -1,107 +1,133 @@
 "use client"
-import Title from "./ui/components/title";
-import Description from "./ui/components/description";
-import Image from "next/image";
-import news1 from '../img/news/news_1.png';
-import news2 from '../img/news/news_2.png';
-import know1 from '../img/default/image.H0XLN2.png';
+import CardIcon from "./ui/components/card-icon";
+import Button from "./ui/components/button";
+import Card from "./ui/components/card";
+import CardDoubleColor from "./ui/components/card-double-color";
 import Head from "next/head";
+
 
 export default function Home() {
 
 
   return (
     <>
-    <Head>
-        {/* Aggiungi le meta tag per le keyword */}
-        <meta name="keywords" content="illuminazione, stampaggio plastico, iniezione plastica, automotive, progettazione, qualità, affidabilità" />
-        {/* Aggiungi il tag canonical */}
-        <link rel="canonical" href="https://www.sirion.com/" />
-        {/* Aggiungi le direttive robots */}
-        <meta name="robots" content="index, follow" />
-        {/* Altre meta tag già presenti */}
-        <title>Sirion Srl - Home</title>
-        <meta name="description" content="Sirion Srl è un'azienda leader nel settore dell'illuminazione per il mercato automobilistico, specializzata nello stampaggio plastico ad iniezione. Offriamo un servizio completo, dalla progettazione alla realizzazione del componente finale, garantendo qualità e affidabilità in ogni fase del processo." />
-    </Head>
-    <Title title={'Sirion Srl - Home'} />
-    <Description text={"Sirion Srl è un'azienda leader nel settore dell'illuminazione per il mercato automobilistico, specializzata nello stampaggio plastico ad iniezione. Offriamo un servizio completo, dalla progettazione alla realizzazione del componente finale, garantendo qualità e affidabilità in ogni fase del processo."} />
-
-    <div className="md:flex bg-customWhite p-20">
-        <div className="w-full md:w-1/3 bg-customWhite">
-            <h1 className="text-customBlack text-3xl text-left font-medium">Recensioni dei media: cosa dicono di noi i giornali sulla nostra storia e il nostro impegno</h1>
+      <Head>
+        <link rel="stylesheet" href="/path/to/your/css/icofont.min.css" />
+      </Head>
+      <div className="w-100 h-[40rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/12/facciata-deltats.jpg?id=9202) !important", backgroundPosition: "center"}}>
+        <div className="text-right w-[70rem]">
+          <h1 className="text-5xl font-extrabold">Dal progetto <br/>al prodotto</h1>
+          <p>Grazie alla pluriennale esperienza, offriamo soluzioni a 360°<br/>
+          per la progettazione e lo stampaggio di materie plastiche.</p>
         </div>
-        <div className="w-full md:w-1/3 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">01</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-xl text-left font-medium">Stampa</h1>
-                    <Image src={news1} alt="News 1" width={500} height={300} className="p-10" />
-                </div>
+      </div>
+      <div className="w-100 bg-customWhite flex-col flex items-center">
+        <h2 className="text-4xl text-customBlack font-extrabold text-center">L azienda</h2>
+        <p className="text-customBlack justify-center text-center">Nata dalla fusione tra due storiche società, Delta Components e ATS, DeltAts è una realtà importante nello stampaggio materie
+        plastiche in provincia di Torino. La produzione è destinata principalmente a prodotti ad elevata tecnologia per il settore automotive.</p>
+        <div style={{width: "20px", background: "blue", height: "3px", marginBottom:"20px"}}></div>
+          <div className="flex flex-wrap">
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <CardIcon></CardIcon>
+          </div>
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <CardIcon></CardIcon>
+          </div>
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <CardIcon></CardIcon>
+          </div>
+        </div>
+      </div>
+      <div className="w-100 h-[25rem] flex items-center justify-center " style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/06/bg-video.jpg?id=8629) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+        <div className="w-[70rem] md:flex pl-10 pr-10">
+          <div className="w-[80%]">
+            <h1 className="text-5xl font-extrabold">Isola automatizzata per il co-stampaggio di connettori</h1>
+          </div>
+          <div className="xl:w-[100%] md:w-[20%] flex justify-center items-center" >
+            <img style={{ width: "92px", height: "92px"}} src="https://www.deltats.eu/wp-content/uploads/2022/02/video-icon.png"/> 
+          </div>
+        </div>
+      </div>
+      <div className="w-100 flex items-center justify-center  bg-customWhite" style={{ paddingTop:"110px", paddingBottom: "45px"}}>
+        <div className="w-[70rem] md:flex" style={{paddingLeft: "95px", paddingRight:"95px"}}>
+          <div className="w-[50%] flex items-center justify-center">
+            <img style={{ height: "90%"}} src="https://www.deltats.eu/wp-content/uploads/2019/06/pc-prod.jpg"/> 
+          </div>
+          <div className="md:w-[50%]" >
+            <h1 className="text-5xl font-extrabold text-customBlack">I prodotti DeltAts</h1>
+            <p style={{marginTop: "20px", marginBottom: "25px"}} className="text-customBlack">Grazie alla nostra tecnologia e flessibilità, siamo in grado di soddisfare ogni esigenza dei nostri clienti e produrre svariati prodotti per il settore automotive, tipo: frame, valvole controllo pressione, valvole antideflusso, canister per filtri carbone, controllo devio luci, oil cup-filler.</p>
+            <Button text="Scopri"></Button>
+          </div>
+        </div>
+      </div>
+      <div className="w-100 flex items-center justify-center  bg-customWhite" style={{ paddingBottom: "45px"}}>
+        <div className="w-[70rem] md:flex" style={{paddingLeft: "95px", paddingRight:"95px"}}>
+          <div className="w-[30%] flex items-start justify-center">
+            <h1 className="text-5xl font-extrabold text-customBlack">Know How</h1>
+          </div>
+          <div className="md:w-[70%] flex items-start justify-center" style={{borderLeft: "3px", borderColor: "#e2e2e2", borderStyle: "solid", paddingLeft: "15px", paddingRight: "15px"}} >
+            <p  className="text-customBlack">La capacità di affrontare le diverse richieste dei clienti e la ricerca continua di innovazione rappresentano da sempre i punti di forza di DeltAts. Alta produttività ed efficienza combinate a elevata versatilità, ci permettono di essere partner affidabile per i maggiori produttori di componenti auto italiani ed esteri.</p>
+          </div>
+        </div>
+      </div>
+      <div className="w-100 bg-customWhite flex-col flex items-center">
+        <div className="flex flex-wrap">
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <Card></Card>
+          </div>
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <Card></Card>
+          </div>
+          <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative" style={{paddingRight:"15px", paddingLeft:"15px", marginBottom:"15px"}}>
+            <Card></Card>
+          </div>
+        </div>
+      </div>
+      <div className="w-100 h-[30rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/06/bg-stampi.jpg?id=8617) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", paddingRight: "10%", paddingLeft: "10%"}}>
+        <div className="text-left">
+          <h1 className="text-5xl font-extrabold text-customBlack">Stampi per il settore <br/> automobilistico</h1>
+          <p className="text-customBlack" style={{marginTop: "25px !important", marginBottom: "20px !important", width: "58%"}}>Grazie alle macchine di cui dispone, DeltAts è in grado di produrre stampi dal più semplice al più complesso (stampi per stampaggio a bi-iniezione, per costampaggio plastica/metallo), utilizzando le più moderne tecnologie.</p>
+          <Button text="Approfondisci"></Button>
+        </div>
+      </div>
+      <div className="w-100 h-[30rem] flex items-center justify-center" style={{backgroundImage: "url(https://www.deltats.eu/wp-content/uploads/2019/06/bg-azienda.jpg?id=8634) !important", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover", paddingRight: "10%", paddingLeft: "10%"}}>
+        <div className="text-center">
+          <h1 className="text-4xl font-extrabold">Produzione stampi e stampaggio materie plastiche</h1>
+          <h3 className="text-2xl font-extrabold"  style={{marginTop: "12px !important", marginBottom: "25px !important"}}>Reparto produttivo con presse dalle 25 alle 800 tonnellate e isole automatizzate.</h3>
+          <Button text="Scopri"></Button>
+        </div>
+      </div>
+      <div className="w-100 bg-customWhite flex-col flex items-center">
+          <div className="flex flex-wrap" style={{paddingRight:"7%", paddingLeft:"7%", paddingTop: "100px", paddingBottom: "100px"}}>
+            <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative">
+              <CardDoubleColor
+                doubleColor={true}
+                img="https://www.deltats.eu/wp-content/uploads/2019/06/flag.png"
+                title="Valore dell"
+                subtitle="esperienza"
+                text="Competenza e miglioramento continuo: questo è il metodo che utilizziamo per garantire i migliori risultati sia di prodotto sia di servizio ai nostri clienti."
+              ></CardDoubleColor>
+            </div>
+            <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative">
+              <CardDoubleColor
+                doubleColor={false}
+                img="https://www.deltats.eu/wp-content/uploads/2019/06/award.png"
+                title="Massima"
+                subtitle="qualità"
+                text="Una realtà industriale attrezzata sia per le grandi produzioni in serie di particolari, sia per produzioni speciali, con lavorazioni che puntano alla massima qualità."
+              ></CardDoubleColor>
+            </div>
+            <div className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 relative">
+              <CardDoubleColor
+                doubleColor={true}
+                img="https://www.deltats.eu/wp-content/uploads/2019/06/chat.png"
+                title="Interlocutore"
+                subtitle="unico"
+                text="DeltAts presidia tutto il processo per garantire qualità al cliente: progettazione e costruzione stampi per materie plastiche, stampaggio, co-stampaggio e lavorazioni speciali."
+              ></CardDoubleColor>
             </div>
         </div>
-        <div className="w-full md:w-1/3 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">02</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-xl text-left font-medium">Piccolo</h1>
-                    <Image src={news2} alt="News 2" width={500} height={300} className="p-10" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div className="md:flex bg-customWhite">
-        <div className="w-full md:w-1/3 p-20 bg-customDarkGrey2">
-            <h1 className="text-customBlack text-5xl text-left font-extrabold">Storia</h1>
-            <p className="text-customBlack text-left mt-4">Sirion Srl, fondata il 01/09/2023 dopo l'acquisizione tramite il bando del MISE dell'ex Blutec, è oggi un attore chiave nel settore automobilistico. Specializzata nella progettazione, stampaggio e assemblaggio di materie plastiche per il mercato dell'Automotive, con particolare attenzione al settore Lighting (interni ed esterni), Sirion Srl rappresenta una realtà produttiva strategica per i principali player del settore. La società è interamente di proprietà della capogruppo DeltAts Srl, con sede a Loranzè (TO).</p>
-        </div>
-        <div className="relative w-full md:w-1/3">
-            <Image src={know1} alt="Immagine Valvole di Sicurezza" layout="fill" objectFit="cover"/>
-        </div>
-        <div className="w-full md:w-1/3 p-20 bg-customDarkGrey2">
-            <h1 className="text-customBlack text-5xl text-left font-extrabold">Missione</h1>
-            <p className="text-customBlack text-left mt-4">Sirion si impegna per il successo economico attraverso il miglioramento continuo dei processi e l'utilizzo efficiente delle risorse interne, con il cliente al centro di ogni attività. Con un'attenzione particolare alla soddisfazione del cliente e dei dipendenti, Sirion promuove un ambiente di lavoro sano e rispettoso basato sulla fiducia e sull'innovazione. La qualità, la competitività dei costi e la sostenibilità ambientale guidano il nostro successo, con un'impegno costante per la sicurezza sul posto di lavoro.</p>
-        </div>
-    </div>
-
-    <div className="md:flex bg-customWhite p-20">
-        <div className="w-full md:w-1/4 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">01</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-5xl text-left font-medium">7000</h1>
-                    <h3 className="text-customBlack text-left font-medium mt-4">mq di struttura coperta</h3>
-                </div>
-            </div>
-        </div>
-        <div className="w-full md:w-1/4 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">02</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-5xl text-left font-medium">30000</h1>
-                    <h3 className="text-customBlack text-left font-medium mt-4">mq di struttura totale</h3>
-                </div>
-            </div>
-        </div>
-        <div className="w-full md:w-1/4 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">03</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-5xl text-left font-medium">80</h1>
-                    <h3 className="text-customBlack text-left font-medium mt-4">persone nel team</h3>
-                </div>
-            </div>
-        </div>
-        <div className="w-full md:w-1/4 bg-customWhite">
-            <div className="flex">
-                <h1 className="text-textGrey text-5xl text-left font-extrabold mr-4">04</h1>
-                <div className="flex flex-col">
-                    <h1 className="text-customBlack text-5xl text-left font-medium">800</h1>
-                    <h3 className="text-customBlack text-left font-medium mt-4">tonnellaggio massimo presse</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</>
+      </div>
+    </>
   );
 }
