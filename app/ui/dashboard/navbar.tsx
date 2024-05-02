@@ -58,53 +58,38 @@ const navbarClass = scrollY > 0 ? 'bg-customBlueRgb' : '';
             
               <div className="relative" onMouseEnter={toggleMenu} onMouseLeave={toggleMenu}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex h-100 flex items-center">
-                  <a href="/company">Azienda</a>
-                  <ArrowDownIcon />
+                  <a href="/company">Home</a>
                 </button>
-                {isOpen && (
-                  <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="code-of-ethics" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Codice Etico</a>
-                  </div>
-                )}
               </div>
-              <a href="/products" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a>
+              <a href="/products" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Azienda</a>
               <div className="relative" onMouseEnter={toggleMenuKH} onMouseLeave={toggleMenuKH}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
-                <a href="/know-how">  Know How</a>
+                  <a>Prodotti</a>
                   <ArrowDownIcon />
                 </button>
                 {isOpenKH && (
-                  <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
-                    <a href="/co-engineering" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Co-engineering</a>
-                    <a href="/analysis-and-study-of-materials" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Analisi e studio dei materiali</a>
-                  </div>
-                )}
-              </div>
-              <a href="/molds" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Stampi</a>
-              
-              <div className="relative" onMouseEnter={toggleMenuProd} onMouseLeave={toggleMenuProd}>
-                <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
-                  <a href="/production">Produzione</a>
-                  <ArrowDownIcon />
-                </button>
-                {isOpenProd && (
                   <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100  shadow-lg">
-                    <a href="/machines" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Macchinari</a>
-                    <a href="/industry-4-0" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Industria 4.0</a>
+                    <a href="/industry-4-0" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Know-How</a>
+                    <a href="/products"  className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">I nostri prodotti</a>
                   </div>
                 )}
               </div>
-              <a href="/quality" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Qualità</a>
+              
+              <a href="/molds" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Tecnologia</a>
+              
+             
+              <a href="/quality" className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">Sostenibilità</a>
             
 
               <div className="relative" onMouseEnter={toggleMenuContact} onMouseLeave={toggleMenuContact}>
                 <button className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium focus:outline-none flex items-center">
                 
-                  <a href="/contact">Contatti</a>
+                  <a>Contatti</a>
                   <ArrowDownIcon />
                 </button>
                 {isOpenContact && (
                   <div className="bg-customWhite absolute z-10 left-0 w-40 bg-white divide-y divide-gray-100 shadow-lg">
+                    <a href="/contact" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dove siamo</a>
                     <a href="/job-opportunity" className="text-customBlack block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Job Opportunity</a>
                   </div>
                 )}
